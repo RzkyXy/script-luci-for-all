@@ -1003,6 +1003,12 @@ function reconnect(world,id,x,y)
        bot:disconnect()
        sleep(1000)
     end
+    local timeNow = os.date("*t")
+    if timeNow.hour == 11 then
+        done0 = false
+        done1 = false
+        done2 = false
+    end
     if restTimes then
         avoidTemp = os.time() - avoid
         local isTrue = math.floor(avoidTemp%86400%3600/60)
